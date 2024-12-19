@@ -1,0 +1,531 @@
+.diagnostic-list {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.diagnostic-list h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #072635;
+  margin-bottom: 20px;
+}
+
+.diagnostic-list-table {
+  overflow-x: auto;
+}
+#toggleMenu{
+  display: none;
+}
+nav {
+  /* display: none; */
+  transition: transform 0.3s ease;
+}
+
+nav.show {
+  display: block; /* Show when toggled */
+}
+:root {
+  /* Colors: */
+  --active_bg_1: #01F0D0;
+  --active_bg_2: #D8FCF7;
+  --color-072635: #072635;
+  --color-707070: #707070;
+  --color-f6f6f6: #F6F6F6;
+  --color-ededed: #EDEDED;
+  --color-ffffff: #FFFFFF;
+  
+  /* Font/text values */
+  --font-manrope: Manrope;
+  --font-style-normal: normal;
+  --font-weight-800: 800px;
+  --font-weight-normal: normal;
+  --font-weight-bold: bold;
+  --font-size-14: 14px;
+  --font-size-18: 18px;
+  --font-size-24: 24px;
+  --character-spacing-0: 0px;
+  --line-spacing-19: 19px;
+  --line-spacing-24: 24px;
+  --line-spacing-33: 33px;  
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-manrope);
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-f6f6f6);
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background: var(--color-f6f6f6);
+  padding: 18px;
+}
+
+header {
+  border-radius: 70px;
+  height: 72px;
+  width: 100%;
+  background: var(--color-ffffff);
+  padding: 16px 32px;
+  margin-bottom: 32px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ededed);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-072635);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--line-spacing-33);
+}
+
+#left-sidebar {
+  flex-basis: 25%;
+  min-width: 367px;
+  height: 107vh;
+  background: var(--color-ffffff);
+  border-radius: 16px;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#right-sidebar {
+  flex-basis: 25%;
+}
+
+.patient-card-box,
+.lab-results {
+  min-width: 367px;
+  background: var(--color-ffffff);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 32px;
+}
+
+#logo a {
+  display: block;
+}
+
+header nav ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav {
+  flex-basis: 45%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 11px;
+  font: var(--font-style-normal) var(--font-weight-bold) var(--font-size-14)/var(--line-spacing-19) var(--font-manrope);
+  color: var(--color-072635);
+}
+
+header nav ul li.active a,
+header nav ul li:hover a {
+  background: var(--active_bg_1);
+  border-radius: 41px;
+}
+
+#content {
+  flex-basis: 45%;
+}
+
+.diagnosis-history {
+  min-width: 766px;
+  min-height: 600px;
+  background: var(--color-ffffff);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+#profile-menu {
+  flex-basis: 25%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 30px;
+}
+
+#profile-menu .profile {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#profile-menu .menu {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+#logo {
+  flex-basis: 25%;
+  display: flex;
+  align-items: center;
+}
+.patients-list {
+  max-height: 95vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.patients-list ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.patients-list ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.patients-list ul li .patient {
+  flex-basis: 90%;
+  display: flex;
+  gap: 15px;
+}
+.patients-list ul li span {
+  flex-basis: 10%;
+}
+
+.patients-list ul li.active,
+.patients-list ul li:hover {
+  background-color: var(--active_bg_2);
+  cursor: pointer;
+}
+.patients-list .patient-info h3 {
+  font: var(--font-style-normal) var(--font-weight-bold) var(--font-size-14)/var(--line-spacing-19) var(--font-manrope);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--color-072635);
+  text-align: left;
+}
+.patients-list .patient-info p{
+  font: var(--font-style-normal) normal var(--font-weight-normal) var(--font-size-14)/var(--line-spacing-19) var(--font-manrope);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--color-707070);
+  text-align: left;
+}
+button.add-patient {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+}
+.box {
+  min-width: 228px;
+  min-height: 242px;
+  border-radius: 12px;
+  flex-basis: 33%;
+  padding: 16px;
+}
+.box.respiratory-rate{
+  background: #E0F3FA;
+}
+.box.temperature{
+  background: #FFE6E9;
+}
+.box.heart-rate{
+  background: #FFE6F1;
+}
+.blood-pressure-boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+.info-box p {
+  font: normal normal medium 16px/22px Manrope;
+  letter-spacing: 0px;
+  color: var(--color-072635);
+  text-transform: capitalize;
+}
+.info-box h3 {
+  font: normal normal 800 30px/41px Manrope;
+  letter-spacing: 0px;
+  color: var(--color-072635);
+}
+.info-box span{
+  font: normal normal normal 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: var(--color-072635); 
+}
+.diagnostic-list {
+  min-height: 349px;
+  background: var(--color-ffffff);
+  border-radius: 16px;
+  margin: 32px 0;
+  padding: 20px;
+}
+
+.diagnostic-list h2 {
+  font: normal normal 800 24px/var(--line-spacing-33) Manrope;
+  letter-spacing: 0px;
+  color: var(--color-072635);
+  margin-bottom: 20px;
+}
+.info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+table {
+  width: 100%;
+  display: inline-grid;
+  border-collapse: collapse;
+}
+table thead {
+  height: 48px;
+  background: #F6F7F8;
+  border-radius: 24px;
+}
+table.table tbody tr{
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+table thead tr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+table thead tr th,
+table tbody tr td{
+  padding: 20px;
+}
+
+table.table tbody {
+  display: block;
+  max-height: 220px;
+  overflow-y: auto;
+}
+.patient-card-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 32px;
+}
+.patient-card-img h4.name {
+  font: normal normal 800 24px/var(--line-spacing-33) Manrope;
+  letter-spacing: 0px;
+  color: var(--color-072635);
+}
+.patient-details-list ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 24px;
+}
+
+.patient-card-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 29px;
+}
+
+button.btn-show {
+  background: var(--active_bg_1);
+  border-radius: 41px;
+  border: none;
+  outline: none;
+  padding: 12px 24px;
+  font: normal normal bold 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: var(--color-072635);
+}
+
+.patient-info h3 {
+  letter-spacing: 0px;
+  color: var(--color-072635);
+}
+.patient-details-list ul li {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.patient-details-list .patient-info p {
+  font: normal normal bold 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: var(--color-072635);
+  text-transform: capitalize;
+}
+
+.patient-details-list .patient-info h3 {
+  font: normal normal normal 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: var(--color-072635);
+  text-transform: capitalize;
+}
+#profile-menu .profile h3 {
+  font: normal normal bold 14px/19px Manrope;
+letter-spacing: 0px;
+color: var(--color-072635);
+}
+
+#profile-menu .profile p {
+  font: normal normal normal 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: var(--color-707070);
+}
+.lab-results-list ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.lab-results-list ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+.lab-results-list ul li:hover{
+  background-color:#F6F7F8;
+  cursor:pointer;
+}
+.lab-results-list {
+  margin-top: 10px;
+  max-height: 21vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+table.table tbody tr td:nth-child(1) {
+  min-width: 170px;
+}
+table.table tbody tr td:nth-child(2) {
+  min-width: 430px;
+}
+.lab-results-list ul li p {
+  font: var(--font-style-normal) normal var(--font-weight-normal) 13px/18px var(--font-manrope);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--color-072635);
+}
+.chart-container {width: 70%;}
+.details-container {text-align: left;width: 30%;}
+.blood-pressure-box {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background: #F4F0FE;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+#timeFrame {
+  position: absolute;
+  right: 355px;
+  top: 25px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.details-list p {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.details-list h3 {
+  position: relative;
+}
+
+.details-list h3:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: -15px;
+  top: 9px;
+  border-radius: 10px;
+}
+#details .details-list:nth-child(1) h3:before{
+  background: #E66FD2;
+}
+#details .details-list:nth-child(2) h3:before{
+  background: #8C6FE6;
+}
+#toggleMenu{
+  display: none;
+  width: 25px;
+  margin-top: 12px;
+}
+#toggleMenu img {
+  width: 100%;
+  object-fit: cover;
+}
+.patient .patient-img {
+  width: 48px;
+}
+
+.patient .patient-img img {
+  object-fit: cover;
+  width: 100%;
+}
+.patient-card-img img {
+  width: 200px;
+}

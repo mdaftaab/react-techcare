@@ -1,0 +1,82 @@
+{
+    "header": {
+      "profile": {
+        "name": "Dr. Jose Simmons",
+        "designation": "General Practitioner",
+        "image": "/images/senior-woman.png"
+      }
+    },
+    "menuItems": [
+      {
+        "label": "Overview",
+        "link": "#",
+        "icon": "images/icons/home.svg",
+        "active": false
+      },
+      {
+        "label": "Patients",
+        "link": "#",
+        "icon": "images/icons/group.svg",
+        "active": true
+      },
+      {
+        "label": "Schedule",
+        "link": "#",
+        "icon": "images/icons/calendar.svg",
+        "active": false
+      },
+      {
+        "label": "Message",
+        "link": "#",
+        "icon": "images/icons/chat_bubble.svg",
+        "active": false
+      },
+      {
+        "label": "Transactions",
+        "link": "#",
+        "icon": "images/icons/credit_card.svg",
+        "active": false
+      }
+    ],
+    "patients": [
+      { "name": "Emily Williams", "age": 18, "gender": "Female", "image": "/images/patient-1.png" }
+    ],
+    "diagnosisHistory": {
+      "labels": ["Jan", "Feb", "Mar"],
+      "systolic": [120, 140, 160],
+      "diastolic": [80, 70, 90]
+    },
+    "patientDetails": {
+      "name": "Jessica Taylor",
+      "image": "/images/jessica-taylor.png",
+      "info": [
+        { "label": "Date of Birth", "value": "August 23, 1996", "icon": "/images/icons/BirthIcon.svg" }
+      ]
+    },
+    "labResults": [
+      { "name": "Blood Test", "icon": "/images/icons/download.svg" }
+    ],
+    "diagnosticList": [
+          {
+            "problem": "Hypertension",
+            "description": "Chronic high blood pressure",
+            "status": "Under Observation"
+          },
+          {
+            "problem": "Type 2 Diabetes",
+            "description": "Insulin resistance and elevated blood sugar",
+            "status": "Cured"
+          },
+          {
+            "problem": "Asthma",
+            "description": "Recurrent episodes of bronchial constriction",
+            "status": "Inactive"
+          },
+          {
+            "problem": "Osteoarthritis",
+            "description": "Degenerative joint disease",
+            "status": "Untreated"
+          }
+        ]
+  }
+  

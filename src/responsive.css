@@ -1,0 +1,276 @@
+@media screen and (max-width:1441px) and (min-width:1200px){
+    #content {
+        flex-basis: 70%;
+    }
+}
+@media screen and (max-width:1199.99px) and (min-width:1024px){
+    #left-sidebar {
+        min-width: auto;
+        flex-grow: 1;
+    }
+    #content {
+        flex-grow: 1;
+        flex-basis: auto;
+    }
+    #right-sidebar {
+        flex-basis: auto;
+        flex-grow: 1;
+    }
+    .patient-card-box {
+        display: flex;
+        justify-content: space-around;
+    }
+    header nav ul {
+        gap: 12px;
+    }
+    #profile-menu .profile {
+        display: none;
+    }
+}
+@media screen and (max-width:1023.99px) and (min-width:767.99px){
+    html,body{
+        overflow-x: hidden;
+    }
+    #main {
+        gap: 0;
+        width: 100%;
+    }
+    #left-sidebar {
+        height: 50vh;
+        flex-basis: 100%;
+    }
+    .patients-list {
+        max-height: 338px;
+    }
+    .diagnosis-history {
+        min-width: auto;
+        min-height: auto;
+        margin: 30px 0;
+        width: 100%;
+    }
+    
+    .blood-pressure-boxes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .box {
+        flex-basis: 100%;
+    }
+    
+    #content {
+        flex-basis: 100%;
+        width: 100%;
+    }
+    table thead tr th, table tbody tr td{
+        padding:8px;
+        font-size: 14px;
+    }
+    .diagnostic-list {
+        min-height: auto;
+    }
+    main {
+        padding: 15px;
+    }
+    #right-sidebar {
+        flex-basis: 100%;
+    }
+    #diagnosisChart {
+        display: block;
+        box-sizing: border-box;
+        height: 300px;
+        width: 100%;
+    }
+    table.table tbody tr {
+        display: block;
+    }
+
+    table.table tbody tr td:nth-child(1) {
+        min-width: 130px;
+    }
+
+    table.table tbody tr td:nth-child(2) {
+        min-width: 340px;
+    }
+    table.table tbody {
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .blood-pressure-box {
+        flex-direction: column;
+    }
+    .chart-container,
+    .details-container {
+        width: 100%;
+    }
+    #profile-menu {
+        display: none;
+    }
+    
+    header nav {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background: #fff;
+        border: 1.5px solid #eeeeee;
+        border-radius: 0 0 10px 10px;
+        display: none;
+    }
+    header nav.show{
+        display: block;
+    }
+    
+    header {
+        position: relative;
+    }
+    header nav ul{
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        padding: 10px 20px;
+        gap: 15px;
+    }
+    
+    header {
+        border-radius: 70px 70px 0 0;
+    }
+    #toggleMenu{
+        display: block;
+        position: relative;
+    }
+    #timeFrame {
+        right: 10px;
+    }
+    .patient-card-box {
+        display: flex;
+        justify-content: space-around;
+    }
+    .diagnosis-history #details {
+        display: flex;
+        gap: 10%;
+        padding: 20px;
+    }
+
+}
+@media only screen and (max-width:767px){
+    html,body{
+        overflow-x: hidden;
+    }
+    #main {
+        gap: 0;
+        width: 100%;
+    }
+    #left-sidebar {
+        height: 50vh;
+        flex-basis: 100%;
+    }
+    .patients-list {
+        max-height: 338px;
+    }
+    .diagnosis-history {
+        min-width: auto;
+        min-height: auto;
+        margin: 30px 0;
+        width: 100%;
+    }
+    
+    .blood-pressure-boxes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .box {
+        flex-basis: 100%;
+    }
+    
+    #content {
+        flex-basis: 100%;
+        width: 100%;
+    }
+    table thead tr th, table tbody tr td{
+        padding:8px;
+        font-size: 14px;
+    }
+    .diagnostic-list {
+        min-height: auto;
+    }
+    main {
+        padding: 15px;
+    }
+    #right-sidebar {
+        flex-basis: 100%;
+    }
+    #diagnosisChart {
+        display: block;
+        box-sizing: border-box;
+        height: 300px;
+        width: 100%;
+    }
+    table.table tbody tr {
+    display: table-row;
+    }
+
+    table.table tbody tr td:nth-child(1) {
+        min-width: 130px;
+    }
+
+    table.table tbody tr td:nth-child(2) {
+        min-width: 220px;
+    }
+    table.table tbody {
+        max-width: 340px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .blood-pressure-box {
+        flex-direction: column;
+    }
+    
+    .chart-container,
+    .details-container {
+        width: 100%;
+    }
+    #profile-menu {
+        display: none;
+    }
+    
+    header nav {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background: #fff;
+        border: 1.5px solid #eeeeee;
+        border-radius: 0 0 10px 10px;
+        display: none;
+    }
+    header nav.show{
+        display: block;
+    }
+    
+    header {
+        position: relative;
+    }
+    header nav ul{
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        padding: 10px 20px;
+        gap: 15px;
+    }
+    
+    header {
+        border-radius: 70px 70px 0 0;
+    }
+    #toggleMenu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #timeFrame {
+        right: 10px;
+    }
+
+}
